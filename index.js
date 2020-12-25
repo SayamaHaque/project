@@ -88,7 +88,7 @@ app.put('/age/:id', (req, res) =>{
        // mysqlConnection.query(sql);
        mysqlConnection.query(sql, [emp.age,req.params.id], (err, rows, fields) => {
         if (!err)
-             res.send('Updated employee data.');
+             res.send('Updated employee age.');
         else
             console.log(err);
     })
